@@ -1,5 +1,5 @@
 import inquirer from 'inquirer';
-import { connectToDb } from './db';
+import { connectDB } from './db';
 import {
     getDepartments,
     getRoles,
@@ -162,6 +162,6 @@ const menu = async (): Promise<void> => {
 };
 
 (async () => {
-    await connectToDb();
+    await connectDB();
     menu();
 })();

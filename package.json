@@ -6,7 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "ts-node src/index.ts",
-        "db:setup": "psql -U postgres -d employee_tracker -f ./sql/schema.sql && psql -U postgres -d employee_tracker -f ./sql/seed.sql",
+        "db:setup": "psql -U postgres -d employee_tracker_db -f ./sql/schema.sql && psql -U postgres -d employee_tracker_db -f ./sql/seeds.sql",
         "build": "tsc"
     },
     "keywords": [],

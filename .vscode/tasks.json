@@ -6,7 +6,7 @@
 			"script": "db:setup",
 			"problemMatcher": [],
 			"label": "npm: db:setup",
-			"psql -U postgres -d employee_tracker -f ./SQL/schema.sql && psql -U postgres -d employee_tracker -f ./SQL/seeds.sql"
+			"command": "psql -U postgres -d employee_tracker -f ./SQL/schema.sql && psql -U postgres -d employee_tracker -f ./SQL/seeds.sql"
 		}
 	]
 }

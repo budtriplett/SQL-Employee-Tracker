@@ -1,4 +1,3 @@
-
 import { db } from './db';
 import { Department, Role, Employee } from './types';
 
@@ -15,10 +14,10 @@ export const getRoles = async (): Promise<Role[]> => {
     `;
     const result = await db.query(query);
     return result.rows;
-};  
+};
 
 export const getEmployees = async (): Promise<Employee[]> => {
-     const query = `
+    const query = `
         SELECT e.id, e.first_name, e.last_name, role.title, department.name AS department, role.salary,
                COALESCE(CONCAT(m.first_name, ' ', m.last_name), 'None') AS manager
         FROM employee e
